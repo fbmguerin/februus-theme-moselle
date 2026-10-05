@@ -6,10 +6,12 @@ la Moselle : en-tête avec le bloc-marque, police Marianne, alertes, couleurs
 du verdict (vert / orange / rouge = couleurs « succès / avertissement /
 erreur » du DSFR) et texte agrandi pour la borne.
 
+> ⚠️ ⚠️ ⚠️
 > Ce dépôt est en français : il s'adresse à la préfecture de la Moselle.
 > **Lisez le fichier [NOTICE](NOTICE)** : le DSFR, la police Marianne et le
 > bloc-marque ne sont **pas** sous licence MIT, ne sont **pas** dans ce dépôt,
 > et ne peuvent être utilisés que par les services de l'État.
+> ⚠️ ⚠️ ⚠️
 
 ## Contenu
 
