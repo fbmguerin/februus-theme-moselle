@@ -11,6 +11,7 @@ erreur » du DSFR) et texte agrandi pour la borne.
 > Ce dépôt est en français : il s'adresse à la préfecture de la Moselle. **Lisez le fichier [NOTICE](NOTICE)** : le DSFR, la police Marianne et le bloc-marque ne sont **pas** sous licence MIT, ne sont **pas** dans ce dépôt, et ne peuvent être utilisés que par les services de l'État.
 >
 > ⚠️ 🇬🇧/🇺🇸
+> 
 >  This deposit is in French: it is addressed to the Moselle prefecture. **Read the [NOTICE](NOTICE)** file: the DSFR, the Marianne font and the brand block are **not** under an MIT license, are **not** in this repository, and can only be used by state services.
 
 ## Contenu
