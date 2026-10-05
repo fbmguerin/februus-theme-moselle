@@ -1,0 +1,20 @@
+{% if screen.blocked_device and screen.name != "degraded" %}
+  <div class="fr-alert fr-alert--error">
+    <h2 class="fr-alert__title">Un appareil USB a été bloqué</h2>
+    <p>Ce n'est pas une clé USB normale. Si on vous l'a remis comme une clé USB, ne l'utilisez pas.</p>
+    <p>Débranchez-le maintenant et prévenez votre support informatique.</p>
+  </div>
+{% endif %}
+{% if screen.extra_keys and screen.name != "degraded" %}
+  <div class="fr-alert fr-alert--warning">
+    {% if screen.name == "idle" %}
+      <h2 class="fr-alert__title">Une clé USB n'a pas été vérifiée</h2>
+      <p>Une clé USB est encore branchée, mais elle n'a pas été vérifiée.</p>
+      <p>Retirez-la, puis rebranchez-la.</p>
+    {% else %}
+      <h2 class="fr-alert__title">Deux clés USB sont branchées</h2>
+      <p>La station vérifie une seule clé à la fois.</p>
+      <p>Retirez l'autre clé. Elle n'est pas vérifiée.</p>
+    {% endif %}
+  </div>
+{% endif %}

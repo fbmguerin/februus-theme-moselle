@@ -1,0 +1,26 @@
+NOTICE — ce qui est couvert par la licence MIT, et ce qui ne l'est pas
+
+1. COUVERT par la licence MIT (fichier LICENSE) : les fichiers écrits pour ce
+   thème — templates/base.html, templates/_notice.html, static/theme.css,
+   fetch-dsfr.sh, README.md, NOTICE.
+
+2. NON COUVERT, et NON INCLUS dans ce dépôt : le Système de design de l'État
+   (DSFR) et la police Marianne. Ils sont la propriété de l'État (Service
+   d'information du Gouvernement). Le script fetch-dsfr.sh les télécharge,
+   au moment de l'installation, depuis le paquet officiel « @gouvfr/dsfr »
+   (https://www.npmjs.com/package/@gouvfr/dsfr), avec leur licence
+   (static/dsfr/LICENSE.md : licence Etalab 2.0 et modalités d'utilisation
+   du SIG, https://github.com/GouvernementFR/dsfr/blob/main/doc/legal/cgu.md).
+   Ces modalités réservent l'usage du DSFR aux services de l'État et interdisent
+   toute confusion avec un service public officiel. Ne téléchargez et
+   n'utilisez le DSFR que si vous y avez droit.
+
+3. NON COUVERT : le bloc-marque « Préfet de la Moselle » et l'identité visuelle
+   de l'État (Marianne, devise). Les gabarits de ce thème contiennent le texte
+   du bloc-marque de la préfecture de la Moselle ; il n'est utilisable que par
+   la préfecture de la Moselle et ses services. La licence MIT ne donne AUCUN
+   droit sur cette identité. Pour un autre organisme, remplacez le bloc-marque
+   par le vôtre ou n'utilisez pas ce thème.
+
+Ce thème ne doit pas être présenté comme un site ou un service officiel de
+l'État par quelqu'un qui n'en fait pas partie.

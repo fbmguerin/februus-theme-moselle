@@ -1,0 +1,49 @@
+<!doctype html>
+{# Theme "Préfet de la Moselle" (DSFR): replaces februus/web/templates/base.html.
+   Kept from the plain base.html: the <body> classes and data-key, ONE <main>
+   with the notice include and the content block, the <audio>, live.js. #}
+<html lang="fr" data-fr-scheme="light">
+<head>
+  <meta charset="utf-8">
+  <title>Februus</title>
+  <link rel="stylesheet" href="/theme/dsfr/dsfr.min.css">
+  <link rel="stylesheet" href="/theme/theme.css">
+</head>
+<body class="screen-{{ screen.name }}{% if screen.color %} color-{{ screen.color }}{% endif %}" data-key="{{ key }}">
+  <header role="banner" class="fr-header">
+    <div class="fr-header__body">
+      <div class="fr-container">
+        <div class="fr-header__body-row">
+          <div class="fr-header__brand">
+            <div class="fr-header__brand-top">
+              <div class="fr-header__logo">
+                <p class="fr-logo">Préfet<br>de la Moselle</p>
+              </div>
+            </div>
+            <div class="fr-header__service">
+              <p class="fr-header__service-title">Februus</p>
+              <p class="fr-header__service-tagline">Contrôle des clés USB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    {% include "_notice.html" %}
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="fr-footer" role="contentinfo">
+    <div class="fr-footer__bottom">
+      <p class="fr-footer__bottom-copy">Station {{ station }}</p>
+      <p class="fr-footer__bottom-copy">{% block status %}{% endblock %}</p>
+    </div>
+  </footer>
+  {% if sound %}
+    <audio src="/sounds/{{ sound[0] }}.wav" autoplay{% if sound[1] %} loop{% endif %}></audio>
+  {% endif %}
+  {% if live %}
+    <script src="/static/live.js"></script>
+  {% endif %}
+</body>
+</html>

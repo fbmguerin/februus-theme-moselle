@@ -1,0 +1,65 @@
+/* Theme "Préfet de la Moselle": the DSFR (Système de design de l'État) with
+   big text for a kiosk. The verdict colors are the DSFR functional colors
+   (success / warning / error), the same hues as green / orange / red. */
+
+/* Big text, readable from a distance (the DSFR works in rem). */
+html { font-size: clamp(112%, 2.4vmin, 190%); }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  --tone: var(--background-action-high-blue-france, #000091);
+  --on-tone: #fff;
+}
+body.color-green { --tone: var(--background-action-high-success, #18753c); }
+body.color-orange { --tone: var(--background-action-high-warning, #b34000); }
+body.color-red { --tone: var(--background-action-high-error, #ce0500); }
+/* Waiting for a key: white, calm. */
+body.screen-idle { --tone: var(--background-default-grey, #fff); --on-tone: var(--text-title-grey, #3a3a3a); }
+body.screen-degraded { --tone: var(--grey-200-850, #3a3a3a); }
+body.screen-removed { --tone: var(--background-action-high-error, #ce0500); }
+
+/* The coloured area is the whole <main>: the verdict is seen from afar. */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem clamp(1rem, 7vw, 10rem);
+  background: var(--tone);
+  color: var(--on-tone);
+}
+main > * { margin: 0; }
+main h1 { color: inherit; font-size: 2.4rem; line-height: 1.15; margin: 0 0 0.5rem; }
+main p { color: inherit; }
+
+/* DSFR header and footer stay white, on top and below. */
+.fr-footer { margin-top: 0; padding-top: 0; }
+.fr-footer__bottom { margin-top: 0; padding: 0.75rem clamp(1rem, 7vw, 10rem); display: flex; justify-content: space-between; }
+.fr-footer__bottom-copy { margin: 0; font-size: 0.8rem; }
+
+/* Alerts (second key, blocked device) keep their own colors. */
+.fr-alert { color: var(--text-default-grey, #161616); background: #fff; }
+.fr-alert { border: 4px solid; border-left-width: 1.25rem; padding: 1rem 1.25rem; }
+.fr-alert--error { border-color: var(--background-action-high-error, #ce0500); }
+.fr-alert--warning { border-color: var(--background-action-high-warning, #b34000); }
+.fr-alert p { color: var(--text-default-grey, #161616); margin: 0.25rem 0 0; }
+
+/* Progress bar. */
+.progress { height: 1.75rem; border: 3px solid var(--on-tone); }
+.progress .bar { height: 100%; background: var(--on-tone); }
+
+.warning { font-weight: 700; border: 3px solid var(--on-tone); padding: 0.6rem 0.9rem; }
+.problems { padding-left: 1.3rem; }
+.problems li + li { margin-top: 0.3rem; }
+.details { font-size: 0.8rem; opacity: 0.9; }
+
+/* Tip of the idle screen. */
+.tip { margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--border-default-grey, #ddd); font-size: 0.9rem; }
+
+/* Long analysis: readable from far away. */
+.long-scan { background: #fff; color: var(--tone); padding: 0.6rem 0.9rem; }
+.long-scan .big { font-size: 1.5rem; font-weight: 700; margin: 0.2rem 0; color: var(--tone); }
