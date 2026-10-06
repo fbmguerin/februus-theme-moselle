@@ -36,6 +36,18 @@ main > * { margin: 0; }
 main h1 { color: inherit; font-size: 2.4rem; line-height: 1.15; margin: 0 0 0.5rem; }
 main p { color: inherit; }
 
+/* Any screen width (ultra-wide too): the header follows the same left and
+   right margins as the content and the footer (the DSFR container would
+   centre it at 78rem while the content starts on the left). */
+.fr-header .fr-container {
+  max-width: none;
+  padding-left: clamp(1rem, 7vw, 10rem);
+  padding-right: clamp(1rem, 7vw, 10rem);
+}
+
+/* Kiosk: a click or a drag of the mouse never selects (highlights) text. */
+html { user-select: none; }
+
 /* DSFR header and footer stay white, on top and below. */
 .fr-footer { margin-top: 0; padding-top: 0; }
 .fr-footer__bottom { margin-top: 0; padding: 0.75rem clamp(1rem, 7vw, 10rem); display: flex; justify-content: space-between; }
